@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Noteworthy Speaker Makers of the 60s, 70s, and 80s">
+    <meta name="keywords" content="speakers, audiophile, audiophilia, stereo, stereophonics, manufacturing">
+    <meta name="author" content="Nathaniel Kraft">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="moon/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="opensans-regular/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="opensans-bold/stylesheet.css" type="text/css" charset="utf-8" />
+    <script src="https://use.fontawesome.com/5ad333f9e7.js"></script>
+    <script>
+      function createH2Menu(containerSelector = 'article') {
+
+        const h2Elements = document.querySelectorAll('h2[id][data-menutitle]');
+        // Create the menu container
+        const menu = document.createElement('nav');
+        menu.className = 'h2-menu';
+        
+        // Create an unordered list for the menu items
+        const menuList = document.createElement('ul');
+        h2Elements.forEach(h2 => {
+          // Create list item
+          const listItem = document.createElement('li');
+          // Create the link
+          const link = document.createElement('a');
+          link.href = `#${h2.id}`;
+          link.textContent = h2.getAttribute('data-menutitle');
+          // Append link to list item, then list item to menu list
+          listItem.appendChild(link);
+          menuList.appendChild(listItem);
+        });
+        // Append the list to the menu
+        menu.appendChild(menuList);
+        
+        // Find the container and append the menu
+        const container = document.querySelector(containerSelector);
+        if (container) {
+          container.appendChild(menu);
+        } else {
+          // Fallback to body if container not found
+          document.body.appendChild(menu);
+        }
+        return menu;
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        createH2Menu('#sidebar');
+      });
+    </script>
+
+    <style>
+      body {
+        background-attachment: fixed;
+        background-color: #000;
+        background-repeat: no-repeat;
+        color:#FFF;
+        font-family: sans-serif;
+        font-size:16px;
+        padding:3rem 0 0;
+        position: static;
+      }
+      div, article, aside, .page {
+        box-sizing:border-box;
+      }      
+      h1,h2 {
+        color:#FFF;
+        font-family: 'moonlight';
+        font-weight:normal;  
+        text-align: center;
+			}
+      h1 {
+        font-size:2rem;
+        margin:0 auto 2rem;
+        padding:0 0 0 0;
+      }
+      h1 span {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size:2rem;
+        margin:0 0 2rem 0;
+        padding:4rem 0 0 0;
+      }
+      h3 {
+        font: normal 1.4rem/1.4 'moonbold';
+        margin:0 0 .5rem;
+        padding:0;
+        text-align: center;
+      }
+      p + h3,
+      ul + h3,
+      ol + h3 {
+        padding-top:3rem;
+      }
+      @media (min-width: 800px) {
+       h1 { font-size:4rem;}
+       h1 span { font-size: 2rem; }
+       h2 { font-size:2rem;} 
+       h3 { font-size: 1.8rem; }
+      }
+      p, ol, ul {
+        font: normal 1.2rem/1.8 'open_sansregular';
+        margin:0 0 2rem 0;
+        padding:0 0 0 0;
+      }
+      .moon {
+        font-family: 'moonlight';
+        font-size:120%;
+      }
+      .moonbold {
+        font-family: 'moonbold';
+        font-size:120%;
+      }      
+      p strong, ol strong, ul strong {
+        font-family: 'open_sansbold';
+        font-weight:normal;
+      }
+      /* @media (min-width: 800px) {
+        p, ol, ul {font-size:1.2rem;}
+      } */
+      ol, ul {
+        margin-left:2rem;
+        
+      } 
+      p + ol, p + ul {
+        margin-top:-1rem;
+      }
+      li {
+        margin-bottom:.6rem;
+      }
+      article {
+        margin:0 auto;
+        padding:0;
+        width:100%;
+      }
+      a {
+        color:#82D3FD;
+      }
+      .center-content {
+        text-align: center;
+      }
+      .right-content {
+        float:right;
+        margin-left:1rem;
+      }
+      .right-content img {
+        height:auto;
+        width:140px;
+      }
+      @media (min-width: 800px) {
+        .right-content img {width:200px;}
+      }
+      .credits p {font-size:.9rem; margin-top:3rem;}
+      .contact {
+        display: block;
+        margin:0 0 2rem 0;
+        text-align: center;
+      }
+      .contact a {
+        color:#82D3FD;
+        display:block;
+        padding-bottom:.5rem;
+      }
+      @media (min-width: 800px) {
+        .contact {display: flex; justify-content: center;}
+        .contact a { padding:0 1rem 0;}
+        
+      }
+      .contact i {
+        padding-right:.5rem;
+      }
+      .section {
+        padding-bottom:4rem;
+        padding-top:4rem;
+      }
+      .section--black {
+        
+      }
+      .section--white {
+        background: #FFF;
+      }
+      .section--white h2,
+      .section--white h3,
+      .section--white p,
+      .section--white ol,
+      .section--white ul,
+      .section--white summary {
+        color:#000;
+      }
+
+      .section--inner {
+        max-width:800px;
+        margin:0 auto;
+      }
+      .section--inner--center {
+        text-align: center;
+      }
+      .text--center { 
+        text-align: center;
+      }
+      details {
+        margin: 0 auto 4rem;
+      }
+      summary {
+        background-color:#1796D9;
+        border-color: #1796D9;
+        border-radius: 1rem;
+        border: 1px solid;
+        color: #FFF!important;
+        margin: 0 auto 2rem;
+        padding: 1rem 0;
+        text-align: center;
+        width: 320px;
+      }   
+      details[open] summary {
+        background-color:#FFF;
+        border-color: #1796D9;
+        color: #1796D9!important;
+      }   
+      summary:hover {
+        cursor: pointer;
+      }
+      .page {
+        align-items: self-start;
+        display: flex;
+        margin:0 auto;
+        max-width:1200px;
+      }
+      .page article {
+
+      }
+      .sidebar-menu {
+        flex: 0 0 300px;
+        padding:2rem 2rem 2rem 0;
+        position: sticky;
+        top: 0; 
+      }
+      .sidebar-menu ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+      }      
+      .nav {
+
+      }
+    </style>
+    <title>Noteworthy Speaker Makers of the 60s, 70s, and 80s</title>
+  </head>
+  <body>
+    
+    <div class="page">
+    
+      <aside id="sidebar" class="sidebar-menu">
+        <!-- nav will be generated and appended by function here -->
+      </aside>
+
+      <article>
+      <h1>Noteworthy Speaker Makers of the 60<span>s</span>, 70<span>s</span>, and 80<span>s</span></h1>  
+      <h2 id="ar" data-menutitle="AR Speakers">Acoustic Research (AR)</h2>
+      <p>Acoustic Research was a Cambridge, Massachusetts-based company that manufactured high-end audio equipment. The brand is now owned by VOXX. Acoustic Research was known for the AR-3 series of speaker systems, which used the 12 in (300 mm) acoustic suspension woofer of the AR-1 with newly designed dome mid-range speaker and high-frequency drivers. AR's line of acoustic suspension speakers were the first loudspeakers with relatively flat response, extended bass, wide dispersion, small size, and reasonable cost. The AR Turntable remains a highly sought vinyl record player. </p>
+
+      <h2 id="advent" data-menutitle="Advent Speakers">Advent</h2>
+      <p>Around 1968, Henry Kloss quit <a href="#klh">KLH</a> to develop a low-cost projection television, but had trouble financing the leading-edge research and development that was still required. To earn some money, he decided to build a high-performance low-cost dual driver speaker system with 10-inch (25 cm) woofer called simply The Advent Loudspeaker (later given the retronym the Larger Advent, after introduction of The Smaller Advent Loudspeaker). It rivaled the sound of the then top-line AR Model 3a (which used three drivers and a 12-inch (30 cm) woofer), but only cost about half as much.</p>
+
+      <p>Advent produced a number of different versions of the 2-way Advent, including the Advent Loudspeaker, the Smaller Advent Loudspeaker, the "New" Advent Loudspeaker, Advent/2, Advent/3, 4000 series, and 5000 series, to name a few. They were usually offered in both wood veneer and vinyl-covered "utility" cabinet versions, which other than appearance were acoustically identical. </p>
+
+      <h2 id="boston" data-menutitle="BA Speakers">Boston Acoustics</h2>
+      <p>Boston Acoustics was an American manufacturer of home and mobile audio equipment founded in 1979. The company produced speakers for home, custom/architectural, and car audio. </p>
+      <p>Advent veterans Andy Kotsatos (known as Andy Petite) and Frank Reed founded the company in 1979. Andy Kotsatos was known as Andy Petite. His grandfather immigrated to the United States and worked as a waiter in a French restaurant. Because of his small stature, the rest of the staff named him Le Petit: French for small. Eventually bending to the social pressure to Americanize, he changed his name from Kostatsos to Petite. After founding Boston Acoustics and achieving success with the company, Petite changed his name back to Kotsatos. </p>
+
+      <h2 id="jbl" data-menutitle="JBL Speakers">JBL</h2>
+      <p>JBL is an American audio equipment manufacturer headquartered in Los Angeles, California. The company was founded in 1946 by James Bullough Lansing, an American audio engineer and loudspeaker designer. JBL currently serves the home and professional audio markets. Their professional products include live PA systems, studio monitors, and loudspeakers for cinema. Their home products include home audio speakers, waterproof Bluetooth speakers, and high-end car audio. JBL is a subsidiary of Harman International, which is owned by Samsung Electronics. </p>
+
+
+      <h2 id="klipsch" data-menutitle="Klipsch Speakers">Klipsch</h2>
+      <p>Klipsch Audio Technologies (also referred to as Klipsch Speakers or Klipsch Group, Inc.) is an American loudspeaker company based in Indianapolis, Indiana. Founded in Hope, Arkansas, in 1946 as 'Klipsch and Associates' by Paul W. Klipsch, the company produces loudspeaker drivers and enclosures, as well as complete loudspeakers for high-end, high-fidelity sound systems, public address applications, and personal computers. </p>  
+      
+      <h2 id="klh" data-menutitle="KLH Speakers">KLH</h2>
+      <p>KLH Audio is an American audio electronics company based in Noblesville, Indiana. Originally founded in 1957 as KLH Research and Development Corporation in Cambridge, Massachusetts, the company takes its name from the initials of its founders: Henry Kloss, Malcolm S. Low, and Josef Anton Hofmann. </p>
+      <p>The original aim of the company was to design and produce loudspeakers in speaker enclosures. KLH had sales of $17 million, employed over 500 people and sold over 30,000 speakers a year before it was sold to Singer Corporation in 1964. In 1970, KLH became a wholly-owned subsidiary of Electro Audio Dynamics (EAD) of Great Neck, New York. EAD moved KLH's headquarters to Canoga Park, Los Angeles, in 1980.</p>
+
+      <div class="credits">
+        <p>Credits: Information sourced from Wikipedia</p>
+      </div>
+      </article>
+    </div>
+  </body>
+</html>
